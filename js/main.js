@@ -18,6 +18,46 @@ function mostrarMenu() {
     return opcion
 }
 
+function reservaCrossfit() {
+    
+    let horariosCrossfit = prompt("1.9hs\n2.10hs\n3.18hs")
+        if (horariosCrossfit === "1") {
+            confirmarReserva("9hs")
+        } else if (horariosCrossfit === "2") {
+            confirmarReserva("10hs")
+        } else if (horariosCrossfit === "3") {
+            confirmarReserva("18hs")
+        } else {
+            mostrarError()
+        }
+}
+
+function reservaFuncional() {
+    let horariosFuncional = prompt("1.11hs\n2.19hs\n3.20hs")
+        if (horariosFuncional === "1") {
+            confirmarReserva("11hs")
+        } else if (horariosFuncional === "2") {
+            confirmarReserva("19hs")
+        } else if (horariosFuncional === "3") {
+            confirmarReserva("20hs")
+        } else {
+            mostrarError()
+        }
+}
+
+function reservaHyrox() {
+    let horariosHyrox = prompt("1.15hs\n2.16hs\n3.17hs")
+        if (horariosHyrox === "1") {
+            confirmarReserva("15hs")
+        } else if (horariosHyrox === "2") {
+            confirmarReserva("16hs")
+        } else if (horariosHyrox === "3") {
+            confirmarReserva("17hs")
+        } else {
+            mostrarError()
+        }
+}
+
 function confirmarReserva(horario) {
     alert("Tu clase de las " + horario + " ha sido reservada.")
 }
@@ -35,40 +75,13 @@ while (seguir) {
         let clase = prompt("1.Crossfit\n2.Funcional\n3.Hyrox")
         switch (clase) {
             case "1":
-                let reservaCrossfit = prompt("1.9hs\n2.10hs\n3.18hs")
-                if (reservaCrossfit === "1") {
-                    confirmarReserva("9hs")
-                } else if (reservaCrossfit === "2") {
-                    confirmarReserva("10hs")
-                } else if (reservaCrossfit === "3") {
-                    confirmarReserva("18hs")
-                } else {
-                    mostrarError()
-                }
+                reservaCrossfit()
                 break
             case "2":
-                let reservaFuncional = prompt("1.11hs\n2.19hs\n3.20hs")
-                if (reservaFuncional === "1") {
-                    confirmarReserva("11hs")
-                } else if (reservaFuncional === "2") {
-                    confirmarReserva("19hs")
-                } else if (reservaFuncional === "3") {
-                    confirmarReserva("20hs")
-                } else {
-                    mostrarError()
-                }
+                reservaFuncional()
                 break
             case "3":
-                let reservaHyrox = prompt("1.15hs\n2.16hs\n3.17hs")
-                if (reservaHyrox === "1") {
-                    confirmarReserva("15hs")
-                } else if (reservaHyrox === "2") {
-                    confirmarReserva("16hs")
-                } else if (reservaHyrox === "3") {
-                    confirmarReserva("17hs")
-                } else {
-                    mostrarError()
-                }
+                reservaHyrox()
                 break
             default:
                 mostrarError()
